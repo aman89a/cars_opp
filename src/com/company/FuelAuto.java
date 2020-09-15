@@ -1,26 +1,26 @@
 package com.company;
 
 public class FuelAuto extends Auto {
-    private int availabiePetrol;
+    private int availablePetrol;
     private int tankVolume;
 
-    public FuelAuto(String producer, String model, EngineType engineType, int availabiePetrol, int tankVolume) {
+    public FuelAuto(String producer, String model, EngineType engineType, int availablePetrol, int tankVolume) {
         super(producer, model, engineType);
-        this.availabiePetrol = availabiePetrol;
+        this.availablePetrol = availablePetrol;
         this.tankVolume = tankVolume;
     }
 
     public void fuleUp(int perolVolume) {
-        availabiePetrol += perolVolume;
+        availablePetrol += perolVolume;
         System.out.println("Adding fuel");
     }
 
-    public int getAvailabiePetrol() {
-        return availabiePetrol;
+    public int getAvailablePetrol() {
+        return availablePetrol;
     }
 
-    public void setAvailabiePetrol(int availabiePetrol) {
-        this.availabiePetrol = availabiePetrol;
+    public void setAvailablePetrol(int availablePetrol) {
+        this.availablePetrol = availablePetrol;
     }
 
     public int getTankVolume() {
