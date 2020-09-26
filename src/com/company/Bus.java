@@ -12,8 +12,17 @@ public class Bus extends FuelAuto {
 
     public void fuelUp(){
         int volume = getTankVolume() - getAvailablePetrol();
-        fuleUp(volume);
+        fuelUp(volume);
 
+    }
+
+
+    @Override
+    public void fuelUp(int petrolVolume) {
+        int volume = petrolVolume + getAvailablePetrol();
+        if (volume > getTankVolume()){
+            setAvailablePetrol(getTankVolume());
+        }
     }
 
     public int getPassengersNumber() {
